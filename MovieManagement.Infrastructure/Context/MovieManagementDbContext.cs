@@ -16,11 +16,10 @@ namespace MovieManagement.Infrastructure.Context
         public DbSet<Biography> tblBiographies { get; set; }
         public DbSet<Genre> tblGenres { get; set; }
 
-        //we want to seed some data
+        //we want to seed some data on migration 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             modelBuilder.Entity<Actor>().HasData(
                 new Actor { Id = 1, FirstName = "Gilbert", LastName = "Kibet" },
                 new Actor { Id = 2, FirstName = "Jack", LastName = "Norris" },
@@ -36,5 +35,6 @@ namespace MovieManagement.Infrastructure.Context
                 );
         }
 
+        
     }
 }

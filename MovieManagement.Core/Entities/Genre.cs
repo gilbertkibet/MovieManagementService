@@ -12,6 +12,6 @@ namespace MovieManagement.Core.Entities
 
         public string Name { get; set; } = string.Empty;
 
-        public List<Movie>? Movies { get; set;}
+        public List<Movie>? Movies { get; set; }
     }
 }
